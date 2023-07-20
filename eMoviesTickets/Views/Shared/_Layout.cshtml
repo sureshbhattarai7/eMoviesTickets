@@ -13,20 +13,45 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">eMoviesTickets</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Movie" asp-action="Index">eMoviesTickets</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                    <div>
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Index"> <i class="badge-info bi-film"></i>Movies</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Actor" asp-action="Index"> <i class="badge-info fas fa-users"></i>Actors</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Director" asp-action="Index"> <i class="badge-info"></i>Directors</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Cinema" asp-action="Index"> <i class="badge-info bi bi-tv"></i>Cinemas</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+
+                    <form class="form-inline my-2 my-lg-0" asp-controller="Movie" asp-action="Filter" style="padding-right: 100px;">
+                        <div class="input-group">
+                            <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..." />
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </nav>
@@ -39,7 +64,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - eMoviesTickets - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - eMoviesTickets
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

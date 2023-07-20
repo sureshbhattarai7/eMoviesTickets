@@ -15,9 +15,9 @@
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.MovieName
-                                    
-                                        <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
-                                    
+
+                                    <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+
                                 </h5>
                             </p>
                         </div>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card-body">
-                            <p class="card-text">@item.MovieDescription</p>
+                            <p class="card-text" style="text-align: justify">@item.MovieDescription</p>
                             <p class="card-text"><b>Cinema: </b>@item.Cinema.CinemaName</p>
                             <p class="card-text"><b>Category: </b>@item.MovieCategory</p>
                             <p class="card-text"><b>Start Date: </b>@item.StartDate.ToString("dd MMM yyyy")</p>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="card-footer ">
+                        <div class="card-footer justify-content-between">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@item.Id">
                                     <i class="bi bi-eye-fill"></i> Show Details
