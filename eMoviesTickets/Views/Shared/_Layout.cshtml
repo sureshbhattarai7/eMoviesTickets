@@ -21,10 +21,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Movie" asp-action="Index"><i class="bi bi-film"></i>Movie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Actor" asp-action="Index"><i class="bi bi-universal-access"></i>Actors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Director" asp-action="Index"><i class="bi bi-headphones"></i>Directors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cinema" asp-action="Index"><i class="bi bi-tv"></i>Cinemas</a>
                         </li>
                     </ul>
                 </div>
@@ -38,8 +44,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - eMoviesTickets - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container justify-content-center">
+            &copy; 2023 - eMoviesTickets
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

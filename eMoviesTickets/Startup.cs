@@ -1,4 +1,5 @@
 ﻿using eMoviesTickets.Data;
+using eMoviesTickets.Data.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,6 +17,9 @@ namespace eMoviesTickets
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //Configure Services
+            services.AddScoped<IActorsServices, ActorsService>();
 
             services.AddControllersWithViews();
         }

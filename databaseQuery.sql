@@ -168,31 +168,28 @@ select * from Actors
 select * from Actors_Movies
 
 insert into Actors_Movies
-values(9, 11);
+values(11, 9);
 
 insert into Actors_Movies
-values(10, 12);
+values(12, 10);
 
 insert into Actors_Movies
-values(11, 14);
+values(14, 11);
 
 insert into Actors_Movies
-values(8, 13);
+values(13, 8);
 
 insert into Actors_Movies
-values(12, 15);
+values(15, 12);
 
 insert into Actors_Movies
-values(13, 16);
+values(16, 13);
 
 insert into Actors_Movies
-values(9, 17);
+values(17, 9);
 
 insert into Actors_Movies
-values(12, 15);
+values(16, 12);
 
 insert into Actors_Movies
-values(12, 16);
-
-insert into Actors_Movies
-values(14, 16);
+values(16, 14);
