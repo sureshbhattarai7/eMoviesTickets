@@ -21,21 +21,38 @@ namespace eMoviesTickets.Controllers
 
         public IActionResult Create()
         {
-            Actor actor = new Actor();
-            return View(actor);
+            return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create([Bind("ProfilePictureURL, FullName, Description")] Actor actor)
         {
-            if (!ModelState.IsValid)
-            {
-                Console.WriteLine("Invalid model state when creating an actor.");
 
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(actor);
+            //}
+            //await _service.AddAsync(actor);
+            //return RedirectToAction(nameof(Index));
+
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(actor);
+                }
+
+                await _service.AddAsync(actor);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or handle it as needed
+                // You can also display an error message to the user
+
+                ModelState.AddModelError("", "An error occurred while saving the actor. Please try again later.");
                 return View(actor);
             }
-            await _service.AddAsync(actor);
-            return RedirectToAction(nameof(Index));
         }
 
         //Get: Actor/Details/1
